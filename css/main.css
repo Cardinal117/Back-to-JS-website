@@ -1,0 +1,433 @@
+/* Styles for all links to match the theme of the website. */
+a,
+a:visited {
+  color: #f0db4f;
+  text-decoration: none;
+  font-family: "Source Code Pro", monospace;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Adjusts the header margin. */
+header {
+  margin-bottom: 5%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  min-height: 100vh;
+}
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Main heading styling. */
+.main-heading {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  margin-top: 3%;
+}
+
+/* Styling for heading1 */
+h1,
+.heading1 {
+  margin-left: 10px;
+  margin-top: 0;
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+
+h2 {
+  color: #000000 !important;
+}
+
+/* Styles the drop down list starting word and items. */
+.drop-down {
+  position: relative;
+  font-weight: bold;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  list-style: none;
+  display: inline-block;
+}
+
+.drop a {
+  display: block;
+  padding: 10px 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.drop a:last-child {
+  margin-bottom: 0;
+}
+
+.drop a:hover {
+  background-color: #f0db4f; /* your turquoise or highlight color */
+  color: #000000;
+}
+
+/* Styles the items in the dropdown list. */
+.drop {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  top: 100%;
+  left: 0;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  line-height: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: normal;
+
+  padding: 10px 0;
+}
+
+/* Styles for the fancy hamburger menu.  */
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.hamburger-menu {
+  width: 40px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 2px;
+  background-color: rgb(0, 0, 0);
+  padding: 16px;
+}
+
+.hamburger-menu span {
+  height: 4px;
+  background-color: #f0db4f;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.menu-label {
+  color: #f0db4f;
+  text-decoration: none;
+  border-radius: 2px;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 10px;
+  font-size: 1em;
+}
+
+/* Aligns h2 to the left and modifies the font. */
+h2 {
+  font-size: 1.8rem;
+  color: rgb(81, 81, 81);
+  text-align: left;
+  margin-top: 3%;
+}
+
+/* Allows the custom style bullet image to be used. */
+.default-list {
+  background-color: #000000;
+  color: #f0db4f;
+  font-family: "Source Code Pro", monospace;
+  list-style: none;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.default-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.default-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #f0db4f;
+  font-size: 1.2rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  font-family: "Source Code Pro", monospace;
+  color: #000000;
+}
+
+ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+ul li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Styling for all paragraphs. */
+p {
+  color: #34da9e;
+  text-decoration: none;
+  font-family: "century gothic", sans-serif;
+  font-size: 1.2rem;
+  color: rgb(0, 0, 0);
+  padding: 5px;
+  text-align: left;
+  max-width: 100%;
+}
+
+/* Aligns a cell to the top left of the page. */
+.left-top-align-table {
+  border-bottom: 5px solid rgba(0, 0, 0, 0.8);
+  border-spacing: 120px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.356);
+  backdrop-filter: blur(2px);
+  z-index: 5;
+}
+
+/* Centers text in a cell. */
+.center-text,
+.right-align-text,
+.left-align-text {
+  color: #f0db4f;
+  text-decoration: none;
+  border-radius: 2px;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 10px;
+  font-size: 1.5em;
+  font-family: sans-serif;
+}
+
+/* Shifts a column to the right and changes background color. */
+.right-align-text {
+  position: absolute;
+  right: 30px;
+}
+
+/* Shifts a column to the left. */
+.left-align-text {
+  position: absolute;
+  left: 30px;
+}
+
+/* Creates a cube. */
+.cube {
+  width: 100px;
+  height: 100px;
+  background-color: #a19d94; /* Iron color */
+  border: 1px solid #7d7a74;
+  border-radius: 20px;
+  position: center;
+  margin: 0 auto;
+}
+
+/* Styling for the inner cube. */
+/* Creates another cube smaller than the previous. */
+.cube2 {
+  width: 80px;
+  height: 80px;
+  background-color: var(--White);
+  border: 1px solid #000000;
+  transform: translateX(+8px) translateY(+9px);
+  border-radius: 20px;
+}
+
+/* Creates a rectangle with rounded corners to look like a chain link. */
+.chain {
+  width: 10px;
+  height: 30px;
+  background-color: #7d7a74; /* Chain color */
+  margin: -5px auto;
+  border-radius: 5px;
+}
+
+/* Container for regular content blocks. */
+.container {
+  max-width: 70%;
+  height: auto;
+  margin: 80px auto;
+  background: #e8e8e8;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 94, 87, 0.607);
+}
+
+.code-container {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  margin: 1rem 0;
+  white-space: pre-wrap;
+  line-height: 1.4;
+}
+
+/* Button styling for save for later elements. */
+.save-btn {
+  background-color: rgb(73, 73, 73);
+  color: #ffffff;
+  padding: 4px 10px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for js text to make it look like the logo colour. */
+.js-span {
+  color: #f0db4f;
+  background-color: #000000;
+}
+
+/* 'let', 'const', 'if', 'else', 'return', etc. */
+.js-keyword {
+  color: #569CD6; /* Example: let */
+}
+
+/* Any text wrapped in quotes, single or double. */
+.js-string {
+  color: #ce5d5d; /* Example: "Hello world". */
+}
+
+/* Any numeric literal: whole or decimal. */
+.js-number {
+  color: #fc7250; /* Example: 42 or 3.14. */
+}
+
+/* true, false */
+.js-boolean {
+  color: #fc7250; /* Example: true. */
+}
+
+/* Function names when defined or called. */
+.js-function {
+  color: #c2c079; /* Example: greet(). */
+}
+
+/* Variable names (after declaration). */
+.js-variable {
+  color: #9CDCFE; /* Example: userName. */
+}
+
+/* Symbols like =, +, -, ===, etc. */
+.js-operator {
+  color: #D4D4D4; /* Example: = */
+}
+
+/* Inline and block comments. */
+.js-comment {
+  color: #477931; /* Example: // this is a comment. */
+}
+
+/* Reserved global names like 'console', 'document', etc. */
+.js-reserved {
+  color: #C586C0; /* Example: console. */
+}
+
+/* Formats the input panel for the code-container. */
+.js-input {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 8px 16px;
+  font-size: 1rem;
+  min-width: 60px;
+  min-height: 24px;
+  max-width: 200px;
+  max-height: 40px;
+  vertical-align: middle;
+}
+
+/* Formats the input for checkBox to match the theme for code-container. */
+input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  width: 98%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Formats the button to match the website theme. */
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #000000;
+  color: #f0db4f;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover {
+  background: #f0db4f;
+  color: black;
+}
+
+/* Formats the label to match the website theme. */
+label {
+  display: block;
+  margin-top: 15px;
+  color: #000000;
+}

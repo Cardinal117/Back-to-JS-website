@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Back to JavaScript</title>
+    <link rel="stylesheet" href="/Back to JS/css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <section class="left-top-align-table">
+          <ul id="nav">
+            <li class="drop-down">
+              <a class="drop-down">
+                <div class="menu-toggle">
+                  <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <span class="menu-label">Menu</span>
+                </div>
+              </a>
+              <div class="drop">
+                <a href="/Back to JS/index.html">Home</a>
+                <a href="/Back to JS/html/variable.html">Variables</a>
+                <a href="/Back to JS/html/conditional-statements.html"
+                  >Conditional Statements</a
+                >
+                <a href="/Back to JS/html/arrays-and-loops.html"
+                  >Arrays and Loops</a
+                >
+                <a href="/Back to JS/html/maps.html">Maps</a>
+                <a href="/Back to JS/html/built-in-functions.html"
+                  >Built-in Functions</a
+                >
+                <a href="/Back to JS/html/user-defined-functions.html"
+                  >User-Defined Functions</a
+                >
+                <a href="/Back to JS/html/events-dom.html"
+                  >Events (DOM)</a
+                >
+                <a href="/Back to JS/html/jquery.html"
+                  >jQuery</a
+                >
+              </div>
+            </li>
+          </ul>
+          <span class="right-align-text"
+            ><a href="/Back to JS/html/contactUs.html">Contact Us</a></span
+          >
+        </section>
+      </nav>
+    </header>
+    <video autoplay muted loop playsinline id="background-video">
+      <source src="/Back to JS/media/tech.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <main>
+      <section class="container">
+        <h1>
+          Back To <span class="js-span">JavaScript:</span> Built-In Functions
+        </h1>
+        <hr />
+        <h2>Built-in Functions</h2>
+        <p>
+          JavaScript comes with a bunch of built-in functions that do a lot of
+          the useful things for you. These functions are ready to use without
+          requiring any imports, or installs. If only Java could be so generous.
+          Here are a few of the notable functions:
+        </p>
+
+        <ul>
+          <li>
+            <strong>charAt(index)</strong> – Grabs the character at a specific
+            index in a string.
+          </li>
+          <li>
+            <strong>indexOf('char')</strong> – Finds the first appearance of a
+            character (or substring) in a string.
+          </li>
+          <li>
+            <strong>charCodeAt(index)</strong> – Gives you the ASCII value of
+            the character at the specified position.
+          </li>
+          <li>
+            <strong>fromCharCode(code)</strong> – Converts an ASCII number back
+            into a character.
+          </li>
+          <li>
+            <strong>replace('old', 'new')</strong> – Substitutes one substring
+            with another.
+          </li>
+          <li>
+            <strong>split('delimiter')</strong> – Breaks a string into an array
+            based on a separator.
+          </li>
+          <li>
+            <strong>toUpperCase()</strong> – Converts every letter in the string
+            to uppercase (yelling, basically).
+          </li>
+          <li>
+            <strong>toLowerCase()</strong> – Brings everything down to lowercase
+            (library voice).
+          </li>
+          <li>
+            <strong>join('glue')</strong> – Takes array pieces and stitches them
+            back into a single string.
+          </li>
+          <li>
+            <strong>Math.pow(base, exponent)</strong> – Raises a base number to
+            the power of an exponent.
+          </li>
+          <li>
+            <strong>Math.min()</strong> – Finds the smallest number among the
+            arguments.
+          </li>
+          <li>
+            <strong>Math.max()</strong> – Finds the largest number among the
+            arguments.
+          </li>
+          <li>
+            <strong>Math.round()</strong> – Rounds a number to the nearest whole
+            number (goodbye decimals).
+          </li>
+        </ul>
+
+        <h3>Some Code in Action</h3>
+        <!-- Area that simulates the code, do not touch the formatting otherwise it will break. -->
+
+<div class="code-container"><span class="js-comment">// Let's work with a string value, of course we have got to keep it iconic.</span>
+<span class="js-keyword">let</span> <span class="js-variable">greeting</span> <span class="js-operator">=</span> <span class="js-string">"Hello World"</span>;<br>
+<span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-variable">greeting</span>.<span class="js-function">charAt</span>(<span class="js-number">6</span>)); <span class="js-comment">// W</span><br>
+<span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-variable">greeting</span>.<span class="js-function">indexOf</span>(<span class="js-string">"o"</span>)); <span class="js-comment">// 4</span><br>
+<span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-variable">greeting</span>.<span class="js-function">replace</span>(<span class="js-string">"World"</span>, <span class="js-string">"Sir"</span>)); <span class="js-comment">// Hello Sir | now does that not sound like Jarvis?</span>
+</div>
+
+        <p>Output:</p>
+<div class="code-container">W
+4
+Hello Sir
+</div>
+
+<div class="code-container"><span class="js-comment">// Now let's mess with some numbers.</span><br>
+<span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-variable">Math</span>.<span class="js-function">pow</span>(<span class="js-number">2</span>, <span class="js-number">5</span>)); <span class="js-comment">// 32</span><br>
+<span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-variable">Math</span>.<span class="js-function">min</span>(<span class="js-number">5</span>, <span class="js-number">-10</span>, <span class="js-number">42</span>)); <span class="js-comment">// -10</span><br>
+<span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-variable">Math</span>.<span class="js-function">round</span>(<span class="js-number">3.6</span>)); <span class="js-comment">// 4</span>
+</div>
+
+        <p>Output:</p>
+<div class="code-container">32
+-10
+4
+</div>
+
+<div class="code-container"><span class="js-comment">// Finally, upper and lower case transformations.</span><br>
+<span class="js-keyword">let</span> <span class="js-variable">name</span> <span class="js-operator">=</span> <span class="js-string">"Jarvis"</span>;<br>
+<span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-variable">name</span>.<span class="js-function">toUpperCase</span>()); <span class="js-comment">// JARVIS</span><br>
+<span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-variable">name</span>.<span class="js-function">toLowerCase</span>()); <span class="js-comment">// jarvis</span>
+</div>
+
+        <p>Output:</p>
+<div class="code-container">JARVIS
+jarvis
+</div>
+
+        <!-- Moves on to the next page when clicked. -->
+        <button
+          onclick="window.location.href='/Back to JS/html/user-defined-functions.html';"
+        >
+          Go To The Next Page ==>
+        </button>
+      </section>
+    </main>
+  </body>
+  <script src="/Back to JS/js/script.js"></script>
+</html>

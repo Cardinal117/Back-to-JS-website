@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Back to JavaScript</title>
+    <link rel="stylesheet" href="/Back to JS/css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <section class="left-top-align-table">
+          <ul id="nav">
+            <li class="drop-down">
+              <a class="drop-down">
+                <div class="menu-toggle">
+                  <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <span class="menu-label">Menu</span>
+                </div>
+              </a>
+              <div class="drop">
+                <a href="/Back to JS/index.html">Home</a>
+                <a href="/Back to JS/html/variable.html">Variables</a>
+                <a href="/Back to JS/html/conditional-statements.html"
+                  >Conditional Statements</a
+                >
+                <a href="/Back to JS/html/arrays-and-loops.html"
+                  >Arrays and Loops</a
+                >
+                <a href="/Back to JS/html/maps.html">Maps</a>
+                <a href="/Back to JS/html/built-in-functions.html"
+                  >Built-in Functions</a
+                >
+                <a href="/Back to JS/html/user-defined-functions.html"
+                  >User-Defined Functions</a
+                >
+                <a href="/Back to JS/html/events-dom.html"
+                  >Events (DOM)</a
+                >
+                <a href="/Back to JS/html/jquery.html"
+                  >jQuery</a
+                >
+              </div>
+            </li>
+          </ul>
+          <span class="right-align-text"
+            ><a href="/Back to JS/html/contactUs.html">Contact Us</a></span
+          >
+        </section>
+      </nav>
+    </header>
+    <video autoplay muted loop playsinline id="background-video">
+      <source src="/Back to JS/media/tech.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <main>
+      <section class="container">
+        <h1>Back To <span class="js-span">JavaScript:</span> Conditional Statements</h1>
+        <hr />
+        <h2>Conditional Statements:</h2>
+        <p>Conditionals, the fun parts of programming. The if else is a very useful statement that is used probably everywhere. Games are basically built using this important statement.</p>
+
+        <h2>if else</h2>
+        <p>To jog your memory I have some if else code in action below and because we are in a similar topic I have also added some switch case code below that:</p>
+        <!-- Area that simulates the code, do not touch the formatting otherwise it will break. -->
+
+<div class="code-container"><span class="js-comment">// Remember our variable from before? No?</span>
+<span class="js-comment">// Well here they are again.</span><br>
+<span class="js-keyword">let</span> <span class="js-variable">name</span> <span class="js-operator">=</span> <span class="js-string">"REDACTED"</span>;
+<span class="js-keyword">let</span> <span class="js-variable">funnyNumber</span> <span class="js-operator">=</span> <span class="js-number">69</span>; <span class="js-comment">// Hehe, Nice</span>
+<span class="js-keyword">let</span> <span class="js-variable">enjoysPizza</span> <span class="js-operator">=</span> <span class="js-boolean">true</span>;
+
+<span class="js-comment">/* Will only be true if both name equals REDACTED and number is bigger or equals to 69 and of course skip 
+everything and pass if enjoysPizza is true. */</span>
+<span class="js-keyword">if</span> <span class="js-operator">(</span><span class="js-variable">name</span> <span class="js-operator">===</span> <span class="js-string">"REDACTED"</span> <span class="js-operator">&&</span> 
+    <span class="js-variable">funnyNumber</span> <span class="js-operator">>=</span> <span class="js-number">69</span> <span class="js-operator">||</span> <span class="js-variable">enjoysPizza</span><span class="js-operator">)</span><span class="js-operator">{</span><br>
+    <span class="js-reserved">console</span>.<span class="js-function">log</span><span class="js-operator">(</span><span class="js-string">"Ahh welcome pizza enjoyer"</span><span class="js-operator">)</span>; <span class="js-comment">// Prints this if true.</span>
+<span class="js-operator">}</span> <span class="js-keyword">else </span><span class="js-comment">// If conditions aren't met the next condition is checked.</span>
+  <span class="js-keyword">if</span> <span class="js-operator">(</span><span class="js-variable">name</span> <span class="js-operator">===</span> <span class="js-string">"Master-Chief"</span> <span class="js-operator">||</span> 
+      <span class="js-variable">number</span> <span class="js-operator">===</span> <span class="js-number">117</span><span class="js-operator">)</span> <span class="js-operator">{</span>
+    <span class="js-comment">// Welcome Master-Chief.</span>
+    <span class="js-reserved">console</span>.<span class="js-function">log</span><span class="js-operator">(</span><span class="js-string">"ATTENTION!"</span><span class="js-operator">)</span>;
+<span class="js-operator">}</span> <span class="js-keyword">else</span> <span class="js-operator">{</span>
+    <span class="js-comment">// And of course, if no conditions are met default to the else statement.</span>
+    <span class="js-reserved">console</span>.<span class="js-function">log</span><span class="js-operator">(</span><span class="js-string">"Non pizza enjoyers will be prosecuted!"</span><span class="js-operator">)</span>;
+<span class="js-operator">}</span>
+</div>
+
+<div class="code-container"><span class="js-comment">// Let's check the name variable but with switch case.</span>
+<span class="js-keyword">switch</span> <span class="js-operator">(</span><span class="js-variable">name</span><span class="js-operator">)</span> <span class="js-operator">{</span>
+  <span class="js-keyword">case</span> <span class="js-string">"REDACTED"</span><span class="js-operator">:</span>
+        <span class="js-reserved">console</span>.<span class="js-function">log</span><span class="js-operator">(</span><span class="js-string">"Ahh welcome pizza enjoyer"</span><span class="js-operator">)</span>;
+    <span class="js-keyword">break</span>;<br>
+  <span class="js-keyword">case</span> <span class="js-string">"Master-Chief"</span><span class="js-operator">:</span>
+        <span class="js-reserved">console</span>.<span class="js-function">log</span><span class="js-operator">(</span><span class="js-string">"ATTENTION!"</span><span class="js-operator">)</span>;
+    <span class="js-keyword">break</span>;<br>
+  <span class="js-keyword">default</span><span class="js-operator">:</span>
+        <span class="js-reserved">console</span>.<span class="js-function">log</span><span class="js-operator">(</span><span class="js-string">"Non pizza enjoyers will be prosecuted!"</span><span class="js-operator">)</span>;
+    <span class="js-keyword">break</span>;
+<span class="js-operator">}</span>
+</div>
+
+<h2>Alright now time to practice!</h2>
+<p>I have set up some voo doo magic again but this time you may enter 3 values. Watch as the magic happens. Just remember to press the button for it to work.</p>
+
+<!-- Run Button -->
+<button onclick="runConditional()">Run Code</button>
+
+<!-- Inputs -->
+<div class="code-container"><span class="js-comment">// Let’s collect your info first</span>
+<span class="js-keyword">let</span> <span class="js-variable">name</span> <span class="js-operator">=</span> <input class="js-input" type="text" id="username" placeholder="Your name">;
+<span class="js-keyword">let</span> <span class="js-variable">funnyNumber</span> <span class="js-operator">=</span> <input class="js-input" type="number" id="favNum" placeholder="Funny number">;
+<span class="js-keyword">let</span> <span class="js-variable">enjoysPizza</span> <span class="js-operator">=</span> <input type="checkbox" id="pizzaCheckbox"> <span class="js-comment">// Do you like pizza?</span>
+
+<span class="js-comment">// Let’s begin the mighty conditional gates of logic.</span>
+<span class="js-keyword">if</span> (<span class="js-variable">name</span> === <span class="js-string">"REDACTED"</span> && <span class="js-variable">funnyNumber</span> >= <span class="js-number">69</span> || <span class="js-variable">enjoysPizza</span>) {<br>
+    <span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-string">"Ahh welcome pizza enjoyer"</span>);<br>
+<span class="js-bracket">}</span> <span class="js-keyword">else if</span> (<span class="js-variable">name</span> === <span class="js-string">"Master-Chief"</span> || <span class="js-variable">funnyNumber</span> == <span class="js-number">117</span>) {<br>
+    <span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-string">"ATTENTION!"</span>);<br>
+<span class="js-bracket">}</span> <span class="js-keyword">else</span> {<br>
+    <span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-string">"Non pizza enjoyers will be prosecuted!"</span>);
+<span class="js-bracket">}</span><br>
+
+<span class="js-comment">// And now, display the result below:</span><br>
+<p class="interaction js-string"></p>
+</div>
+        <!-- Navigates to the next page when clicked. -->
+        <button onclick="window.location.href='/Back to JS/html/arrays-and-loops.html';">Go To The Next Page ==></button>
+      </section>
+      
+    </main>
+  </body>
+  <script src="/Back to JS/js/script.js"></script>
+</html>

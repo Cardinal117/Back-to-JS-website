@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Back to JavaScript</title>
+    <link rel="stylesheet" href="/Back to JS/css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style></style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <section class="left-top-align-table">
+                <ul id="nav">
+                    <li class="drop-down">
+                        <a class="drop-down">
+                            <div class="menu-toggle">
+                                <div class="hamburger-menu">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <span class="menu-label">Menu</span>
+                            </div>
+                        </a>
+                        <div class="drop">
+                            <a href="/Back to JS/index.html">Home</a>
+                            <a href="/Back to JS/html/variable.html">Variables</a>
+                            <a href="/Back to JS/html/conditional-statements.html">Conditional Statements</a>
+                            <a href="/Back to JS/html/arrays-and-loops.html">Arrays and Loops</a>
+                            <a href="/Back to JS/html/maps.html">Maps</a>
+                            <a href="/Back to JS/html/built-in-functions.html">Built-in Functions</a>
+                            <a href="/Back to JS/html/user-defined-functions.html">User-Defined Functions</a>
+                            <a href="/Back to JS/html/events-dom.html">Events (DOM)</a>
+                            <a href="/Back to JS/html/jquery.html">jQuery</a>
+                        </div>
+                    </li>
+                </ul>
+                <span class="right-align-text"><a href="/Back to JS/html/contactUs.html">Contact Us</a></span>
+            </section>
+        </nav>
+    </header>
+    <video autoplay muted loop playsinline id="background-video">
+        <source src="/Back to JS/media/tech.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+    <main>
+        <section class="container">
+            <h1>
+                Back To <span class="js-span">JavaScript:</span> DOM
+            </h1>
+            <hr />
+            <h3>DOM Events</h3>
+            <p>Events allow JavaScript to react to interactions on the webpage. Here are some common ones:</p>
+            <ul>
+                <li><strong>onchange</strong> – Triggered when a form element is modified.</li>
+                <li><strong>onclick</strong> – Triggered when an element is clicked.</li>
+                <li><strong>onmouseover</strong> – Triggered when hovering over an element.</li>
+                <li><strong>onmouseout</strong> – Triggered when the cursor leaves an element.</li>
+                <li><strong>onkeydown</strong> – Triggered when a keyboard key is pressed.</li>
+                <li><strong>onload</strong> – Triggered when the HTML document has finished loading.</li>
+            </ul>
+            <!-- Area that simulates the code, do not touch the formatting otherwise it will break. -->
+
+<div class="code-container"><span class="js-comment">// Enter a color below and watch this box change its background!</span>
+<input class="js-input" type="text" id="colorInput" placeholder="Try 'skyblue', 'red', or '#00ff00'"><br>
+<span class="js-comment">// Press the button and observe the miraculous transformation.</span>
+<button onclick="changeCodeContainerBackground(this)">Change Container Color</button><br><br>
+<span class="js-comment">// Output will be displayed here:</span><br>
+<p class="interaction js-string">No color applied yet...</p>
+</div>
+
+            <!-- Navigates to the next page when clicked -->
+            <button onclick="window.location.href='/Back to JS/html/jquery.html';">
+                Go To The Next Page ==>
+            </button>
+        </section>
+    </main>
+</body>
+<script src="/Back to JS/js/script.js"></script>
+
+</html>

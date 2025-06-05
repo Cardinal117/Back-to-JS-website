@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Back to JavaScript</title>
+    <link rel="stylesheet" href="/Back to JS/css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <section class="left-top-align-table">
+          <ul id="nav">
+            <li class="drop-down">
+              <a class="drop-down">
+                <div class="menu-toggle">
+                  <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <span class="menu-label">Menu</span>
+                </div>
+              </a>
+              <div class="drop">
+                <a href="/Back to JS/index.html">Home</a>
+                <a href="/Back to JS/html/variable.html">Variables</a>
+                <a href="/Back to JS/html/conditional-statements.html"
+                  >Conditional Statements</a
+                >
+                <a href="/Back to JS/html/arrays-and-loops.html"
+                  >Arrays and Loops</a
+                >
+                <a href="/Back to JS/html/maps.html">Maps</a>
+                <a href="/Back to JS/html/built-in-functions.html"
+                  >Built-in Functions</a
+                >
+                <a href="/Back to JS/html/user-defined-functions.html"
+                  >User-Defined Functions</a
+                >
+                <a href="/Back to JS/html/events-dom.html"
+                  >Events (DOM)</a
+                >
+                <a href="/Back to JS/html/jquery.html"
+                  >jQuery</a
+                >
+              </div>
+            </li>
+          </ul>
+          <span class="right-align-text"
+            ><a href="/Back to JS/html/contactUs.html">Contact Us</a></span
+          >
+        </section>
+      </nav>
+    </header>
+    <video autoplay muted loop playsinline id="background-video">
+      <source src="/Back to JS/media/tech.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <main>
+      <section class="container">
+        <h1>Back To <span class="js-span">JavaScript:</span> Variables</h1>
+        <hr />
+        <h2>Variables:</h2>
+        <p>The important thing to understand about variables is that they can vary. As you might of remembered in Javascript there are 4 different types of variables:</p>
+        <ul>
+            <li>var - This is the original way to declare variables however, this way is prone to hoisting issues and is mostly avoided in modern js.</li>
+            <li>let – This is the way you are familiar with, and is used when the variable's value will change over time.</li>
+            <li>const - The way to declare constants, this is used to declare a variable where the value cannot be changed.</li>
+            <li>Global Variables - This is normally declared outside any function, is accessible anywhere however should be used sparingly to avoid namespace conflicts and annoying bugs.</li>
+        </ul>
+
+        <h2>Variable.Common_Data_Types</h2>
+        <p>As you know, Javascript supports multiple core data types. Here are the most commonly used ones to jog your memory:</p>
+        <!-- Area that simulates the code, do not touch the formatting otherwise it will break. -->
+        <ul>
+            <li>String - A bunch or characters, like the iconic "hello world!". A string can contain just about any characters, numbers and of course letters.</li>
+            <div class="code-container"><span class="js-keyword">let</span> <span class="js-variable">name</span> <span class="js-operator">=</span> <span class="js-string">"REDACTED"</span>;
+<span class="js-comment">// You can also use '' for string values.</span>
+<span class="js-keyword">let</span> <span class="js-variable">name</span> <span class="js-operator">=</span> <span class="js-string">'YEET'</span>;</div>
+
+            <li>Number Variables - These include integers, doubles, and floats.</li>
+            <div class="code-container"><span class="js-comment">// integer</span>
+<span class="js-keyword">let</span> <span class="js-variable">funnyNumber</span> <span class="js-operator">=</span> <span class="js-number">69</span>; <span class="js-comment">// Hehe, Nice</span>
+<span class="js-comment">// double/float</span>
+<span class="js-keyword">let</span> <span class="js-variable">iconicNumber</span> <span class="js-operator">=</span> <span class="js-number">399.99</span>;</div>
+
+            <li>Boolean - Represents true or false values.</li>
+            <div class="code-container"><span class="js-keyword">let</span> <span class="js-variable">enjoysPizza</span> <span class="js-operator">=</span> <span class="js-boolean">true</span>;</div>
+            <li>Array - An ordered list of values.</li>
+            <div class="code-container"><span class="js-keyword">let</span> <span class="js-variable">colors</span> <span class="js-operator">=</span> <span class="js-operator">[</span><span class="js-string">"red"</span>, <span class="js-string">"green"</span>, <span class="js-string">"blue"</span><span class="js-operator">]</span>;</div>
+</ul>
+
+    <h2>Alright now time to practice!</h2>
+    <p>I have set up some voo doo magic to allow you to enter your name, for it to then be displayed in the code block
+        below! Watch as the magic happens. Just remember to press the button for it to work.</p>
+
+        <!-- Input Field and Button -->
+        
+        <button onclick="displayUserName()">Run Code</button>
+        
+        <!-- Display Area -->
+        <div class="code-container"><span class="js-comment">// As you can see I steal your name from the white box above and make it equal to name.</span>
+<span class="js-keyword">let</span> <span class="js-variable">name</span> <span class="js-operator">=</span> <input class="js-input" type="text" id="username" placeholder="Enter your name" required>;
+<span class="js-comment">// This allows me to print your name into the little area below.</span>
+<span class="js-reserved">console</span>.<span class="js-function">log</span><span class="js-operator">(</span><span class="js-string">"Hello "</span> + <span class="js-variable">name</span>);
+<br><br><span class="js-comment">// This is said little area below:</span>
+            <p class="interaction js-string"></p>
+        </div>
+
+        <!-- Navigates to the next page when clicked -->
+        <button onclick="window.location.href='/Back to JS/html/conditional-statements.html';">Go To The Next Page ==></button>
+      </section>
+      
+    </main>
+  </body>
+  <script src="/Back to JS/js/script.js"></script>
+</html>

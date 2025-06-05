@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Back to JavaScript</title>
+    <link rel="stylesheet" href="/Back to JS/css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <section class="left-top-align-table">
+          <ul id="nav">
+            <li class="drop-down">
+              <a class="drop-down">
+                <div class="menu-toggle">
+                  <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <span class="menu-label">Menu</span>
+                </div>
+              </a>
+              <div class="drop">
+                <a href="/Back to JS/index.html">Home</a>
+                <a href="/Back to JS/html/variable.html">Variables</a>
+                <a href="/Back to JS/html/conditional-statements.html"
+                  >Conditional Statements</a
+                >
+                <a href="/Back to JS/html/arrays-and-loops.html"
+                  >Arrays and Loops</a
+                >
+                <a href="/Back to JS/html/maps.html">Maps</a>
+                <a href="/Back to JS/html/built-in-functions.html"
+                  >Built-in Functions</a
+                >
+                <a href="/Back to JS/html/user-defined-functions.html"
+                  >User-Defined Functions</a
+                >
+                <a href="/Back to JS/html/events-dom.html"
+                  >Events (DOM)</a
+                >
+                <a href="/Back to JS/html/jquery.html"
+                  >jQuery</a
+                >
+              </div>
+            </li>
+          </ul>
+          <span class="right-align-text"
+            ><a href="/Back to JS/html/contactUs.html">Contact Us</a></span
+          >
+        </section>
+      </nav>
+    </header>
+    <video autoplay muted loop playsinline id="background-video">
+      <source src="/Back to JS/media/tech.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <main>
+      <section class="container">
+        <h1>Back To <span class="js-span">JavaScript:</span> Maps</h1>
+        <hr />
+        <h2>Maps:</h2>
+        <p>
+          Maps in JavaScript are like high-tech filing cabinets. You store data
+          using a <strong>key</strong>, and you can retrieve it later using that
+          exact key. Unlike regular objects, Maps maintain the order of their
+          entries(very useful), and keys can be any type — strings, numbers,
+          even that one sketchy object you forgot you added in.
+        </p>
+        <!-- Area that simulates the code, do not touch the formatting otherwise it will break. -->
+        
+        <div class="code-container"><span class="js-comment">// You can declare and assign maps like so:</span>
+<span class="js-keyword">let</span> <span class="js-variable">person</span> <span class="js-operator">=</span> <span class="js-operator">{</span>
+   <span class="js-string">"name"</span>: <span class="js-string">"Thanos"</span>,
+   <span class="js-string">"age"</span>: <span class="js-number">1001</span>,
+   <span class="js-string">"adoresPizza"</span>: <span class="js-boolean">false</span> <span class="js-comment">// How dare he! What a Weir-dough!</span>
+<span class="js-operator">}</span>;
+
+<span class="js-comment">// This is how you create a new Map to store cool peoples' names.</span>
+<span class="js-keyword">let</span> <span class="js-variable">coolPeople</span> <span class="js-operator">=</span> <span class="js-keyword">new</span> <span class="js-class">Map</span><span class="js-operator">()</span>;
+
+<span class="js-comment">// This is how you set the key-value pairs.</span>
+<span class="js-variable">coolPeople</span>.<span class="js-function">set</span><span class="js-operator">(</span><span class="js-string">"You"</span>, <span class="js-string">"The fellow viewer"</span><span class="js-operator">)</span>;
+<span class="js-variable">coolPeople</span>.<span class="js-function">set</span><span class="js-operator">(</span><span class="js-string">"Tony Stark"</span>, <span class="js-string">"Iron Man"</span><span class="js-operator">)</span>;
+
+<span class="js-comment">// Getting a value is as simple as:</span>
+<span class="js-reserved">console</span>.<span class="js-function">log</span><span class="js-operator">(</span><span class="js-variable">nicknameMap</span>.<span class="js-function">get</span><span class="js-operator">(</span><span class="js-string">"You"</span><span class="js-operator">)</span><span class="js-operator">)</span>; 
+</div>
+
+    <p>This should Output:</p>
+        <div class="code-container">The fellow viewer</div>
+
+        <!-- Navigates to the next page when clicked -->
+        <button onclick="window.location.href='/Back to JS/html/built-in-functions.html';">
+          Go To The Next Page ==>
+        </button>
+      </section>
+    </main>
+  </body>
+  <script src="/Back to JS/js/script.js"></script>
+</html>

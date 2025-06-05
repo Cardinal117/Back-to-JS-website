@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Back to JavaScript</title>
+    <link rel="stylesheet" href="/Back to JS/css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <section class="left-top-align-table">
+          <ul id="nav">
+            <li class="drop-down">
+              <a class="drop-down">
+                <div class="menu-toggle">
+                  <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <span class="menu-label">Menu</span>
+                </div>
+              </a>
+              <div class="drop">
+                <a href="/Back to JS/index.html">Home</a>
+                <a href="/Back to JS/html/variable.html">Variables</a>
+                <a href="/Back to JS/html/conditional-statements.html"
+                  >Conditional Statements</a
+                >
+                <a href="/Back to JS/html/arrays-and-loops.html"
+                  >Arrays and Loops</a
+                >
+                <a href="/Back to JS/html/maps.html">Maps</a>
+                <a href="/Back to JS/html/built-in-functions.html"
+                  >Built-in Functions</a
+                >
+                <a href="/Back to JS/html/user-defined-functions.html"
+                  >User-Defined Functions</a
+                >
+                <a href="/Back to JS/html/events-dom.html"
+                  >Events (DOM)</a
+                >
+                <a href="/Back to JS/html/jquery.html"
+                  >jQuery</a
+                >
+              </div>
+            </li>
+          </ul>
+          <span class="right-align-text"
+            ><a href="/Back to JS/html/contactUs.html">Contact Us</a></span
+          >
+        </section>
+      </nav>
+    </header>
+    <video autoplay muted loop playsinline id="background-video">
+      <source src="/Back to JS/media/tech.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <main>
+      <section class="container">
+        <h1>
+          Back To <span class="js-span">JavaScript:</span> Arrays and Loops
+        </h1>
+        <hr />
+        <h2>Arrays and Loops:</h2>
+        <p>
+          Arrays and Loops are incredibly useful to a programmer and it would be
+          a shame if you where to forget these. Arrays as you know (or should
+          know) are a an ordered or unordered list of values stored under the
+          name of one verbile name. They allow use to easily group, sort, store,
+          and display these values to our hearts content.
+        </p>
+        <p>
+          Now you might be asking how do we display these values in our arrays
+          again? Great Question! Allow me to show you how using the power of
+          loops. Loops are handy dandy peaces of code that run/copy code the
+          code a set number of times. By using this incredible power we can do
+          stuff like this:
+        </p>
+
+        <h2>Watch as it loops away:</h2>
+        <!-- Area that simulates the code, do not touch the formatting otherwise it will break. -->
+
+<div class="code-container">
+<span class="js-comment">// This is the glorious array.</span>
+<span class="js-keyword">const</span> countdown = [
+  <span class="js-string">"T-minus 5: Hope you said your prayers!"</span>,
+  <span class="js-string">"T-minus 4: Brace for impact... or not."</span>,
+  <span class="js-string">"T-minus 3: This is fine."</span>,
+  <span class="js-string">"T-minus 2: Somebody grab me a snack."</span>,
+  <span class="js-string">"T-minus 1: Goodbye, cruel world."</span>,
+  <span class="js-string">"BOOM! 💥"</span><span class="js-comment">// Notice how you could even add an icon like 💥.</span>
+];
+
+<span class="js-comment">This is the glorious loop.</span>
+<span class="js-keyword">for</span> (<span class="js-keyword">let</span> <span class="js-variable">i</span> = <span class="js-number">0</span>; <span class="js-variable">i</span> <; <span class="js-variable">countdown</span>.<span class="js-function">length</span>; <span class="js-variable">i</span>++) {
+  <span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-variable">countdown</span>[<span class="js-variable">i</span></span>]</span>);
+}
+</div>
+
+<p>This should output:</p>
+<div class="code-container"><span>T-minus 5: Hope you said your prayers!</span>
+<span>T-minus 4: Brace for impact... or not.</span>
+<span>T-minus 3: This is fine.</span>
+<span>T-minus 2: Somebody grab me a snack.</span>
+<span>T-minus 1: Goodbye, cruel world.</span>
+<span>BOOM! 💥</span>
+</div>
+
+<p>And of Course we have to see the other glorious loops we have grown so fond of.</p>
+<div class="code-container"><span class="js-comment">// This is your friendly neighborhood while loop.</span>
+<span class="js-comment">// It has it's use cases and is often forgotten about by beginners.</span>
+<span class="js-keyword">let</span> <span class="js-variable">i</span> <span class="js-operator">=</span> <span class="js-number">0</span>;
+<span class="js-keyword">while</span> (<span class="js-variable">i</span> <span class="js-operator">&lt;</span> <span class="js-variable">countdown</span>.<span class="js-function">length</span>) {
+  <span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-variable">countdown</span>[<span class="js-variable">i</span>]);
+  <span class="js-variable">i</span><span class="js-operator">++</span>;
+}
+
+<span class="js-comment">// You know you are fancy when you use this od yet interesting loop.</span>
+<span class="js-keyword">for</span> (<span class="js-keyword">let</span> <span class="js-variable">countdown</span> <span class="js-keyword">of</span> <span class="js-variable">count</span>) {
+  <span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-variable">count</span>);
+}
+
+<span class="js-comment">// This loop doesn't count... it simply runs your code fo each item in the array. Impeccably useful!</span>
+<span class="js-variable">countdown</span>.<span class="js-function">forEach</span>(<span class="js-keyword">function</span>(<span class="js-variable">line</span>) {
+  <span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-variable">line</span>);
+});
+</div>
+
+<p>☢️ The Infinite Loop of DOOM™</p>
+<div class="code-container"><span class="js-comment">// WARNING: This loop fears no end. Ctrl+C is your only mercy.(just don't run it in your browser please).</span>
+<span class="js-keyword">while</span> (<span class="js-boolean">true</span>) {
+  <span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-string">"⚠️ Nuclear core unstable... evacuate immediately!"</span>);
+}
+
+<span class="js-comment">// This loop fires first, questions later. No permission needed.</span>
+<span class="js-keyword">let</span> <span class="js-variable">i</span> <span class="js-operator">=</span> <span class="js-number">0</span>;
+<span class="js-keyword">do</span> {
+  <span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-variable">countdown</span>[<span class="js-variable">i</span>]);
+  <span class="js-variable">i</span><span class="js-operator">++</span>;
+} <span class="js-keyword">while</span> (<span class="js-variable">i</span> <span class="js-operator"><</span> <span class="js-variable">countdown</span>.<span class="js-function">length</span>);
+
+</div>
+
+        <p>Here are some useful array methods:</p>
+        <ul>
+          <li>
+            <strong>indexOf()</strong> – Finds the position of a specific
+            element in the array (returns -1 if not found).
+          </li>
+          <li>
+            <strong>includes()</strong> – Checks if a certain value exists in
+            the array (returns true or false).
+          </li>
+          <li>
+            <strong>pop()</strong> – Removes the last element from the array and
+            returns it.
+          </li>
+          <li>
+            <strong>push()</strong> – Adds one or more elements to the end of
+            the array and returns the new array length.
+          </li>
+          <li>
+            <strong>shift()</strong> – Removes the first element from the array
+            and returns it.
+          </li>
+          <li>
+            <strong>sort()</strong> – Arranges the elements in the array in
+            ascending order (by default as strings).
+          </li>
+          <li>
+            <strong>splice()</strong> – Adds, removes, or replaces elements in
+            the array at specific positions.
+          </li>
+          <li>
+            <strong>reverse()</strong> – Reverses the order of elements in the
+            array in-place.
+          </li>
+        </ul>
+
+        <h2>Alright now time to practice!</h2>
+        <p>I have set up some voo doo magic again but this time you may enter 3 
+            values. Watch as the magic happens. Just remember to press the button 
+            for it to work.</p>
+
+            <!-- Run Button -->
+<button onclick="runLoop()">Run Code</button>
+
+<!-- Inputs -->
+<div class="code-container"><span class="js-comment">// Let's ask for three names to put into our array:</span>
+<span class="js-keyword">let</span> <span class="js-variable">name1</span> <span class="js-operator">=</span> <input class="js-input" type="text" id="input1" placeholder="Name 1">;
+<span class="js-keyword">let</span> <span class="js-variable">name2</span> <span class="js-operator">=</span> <input class="js-input" type="text" id="input2" placeholder="Name 2">;
+<span class="js-keyword">let</span> <span class="js-variable">name3</span> <span class="js-operator">=</span> <input class="js-input" type="text" id="input3" placeholder="Name 3">;
+
+<span class="js-comment">// Now we form an array from those names.</span>
+<span class="js-keyword">let</span> <span class="js-variable">nameArray</span> <span class="js-operator">=</span> [<span class="js-variable">name1</span>, <span class="js-variable">name2</span>, <span class="js-variable">name3</span>];
+
+<span class="js-comment">// Finally let's loop through and display each name.</span>
+<span class="js-keyword">for</span> (<span class="js-keyword">let</span> <span class="js-variable">i</span> <span class="js-operator">=</span> 0; <span class="js-variable">i</span> < <span class="js-variable">nameArray</span>.<span class="js-function">length</span>; <span class="js-variable">i</span><span class="js-operator">++</span>) {<br>
+    <span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-variable">nameArray</span>[<span class="js-variable">i</span>]);<br>
+<span class="js-bracket">}</span>
+
+<span class="js-comment">// And now we display the result below:</span>
+<p class="interaction js-string"></p>
+</div>
+
+        <!-- Navigates to the next page when clicked. -->
+        <button onclick="window.location.href='/Back to JS/html/maps.html';">
+          Go To The Next Page ==>
+        </button>
+      </section>
+    </main>
+  </body>
+  <script src="/Back to JS/js/script.js"></script>
+</html>

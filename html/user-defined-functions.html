@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Back to JavaScript</title>
+    <link rel="stylesheet" href="/Back to JS/css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <section class="left-top-align-table">
+          <ul id="nav">
+            <li class="drop-down">
+              <a class="drop-down">
+                <div class="menu-toggle">
+                  <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <span class="menu-label">Menu</span>
+                </div>
+              </a>
+              <div class="drop">
+                <a href="/Back to JS/index.html">Home</a>
+                <a href="/Back to JS/html/variable.html">Variables</a>
+                <a href="/Back to JS/html/conditional-statements.html"
+                  >Conditional Statements</a
+                >
+                <a href="/Back to JS/html/arrays-and-loops.html"
+                  >Arrays and Loops</a
+                >
+                <a href="/Back to JS/html/maps.html">Maps</a>
+                <a href="/Back to JS/html/built-in-functions.html"
+                  >Built-in Functions</a
+                >
+                <a href="/Back to JS/html/user-defined-functions.html"
+                  >User-Defined Functions</a
+                >
+                <a href="/Back to JS/html/events-dom.html"
+                  >Events (DOM)</a
+                >
+                <a href="/Back to JS/html/jquery.html"
+                  >jQuery</a
+                >
+              </div>
+            </li>
+          </ul>
+          <span class="right-align-text"
+            ><a href="/Back to JS/html/contactUs.html">Contact Us</a></span
+          >
+        </section>
+      </nav>
+    </header>
+    <video autoplay muted loop playsinline id="background-video">
+      <source src="/Back to JS/media/tech.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <main>
+      <section class="container">
+        <h1>
+          Back To <span class="js-span">JavaScript:</span> User Defined
+          Functions
+        </h1>
+        <hr />
+        <h2>User Defined Functions</h2>
+
+        <p>
+            While built-in functions are quite powerful, JavaScript allows
+            you make your own and this is where the real fun happens. <strong>
+            User defined functions</strong> allow you to wrap up reusable blocks of
+            code into a neat easily accessible package. They make your
+            code cleaner, cooler, and reusable like a pro.
+        </p>
+
+        <h3>Examples in Action</h3>
+        <!-- Area that simulates the code, do not touch the formatting otherwise it will break. -->
+
+<div class="code-container"><span class="js-comment">// This is how you declare a function:</span>
+<span class="js-keyword">function</span> <span class="js-function">greet</span>(<span class="js-variable">name</span>) {<span class="js-comment"> // Notice how you can add parameters to functions.</span><br>
+    <span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-string">"Hello, "</span> + <span class="js-variable">name</span> + <span class="js-string">"!"</span>);
+}<br>
+<span class="js-comment">// This is how you call a Function:</span>
+<span class="js-function">greet</span>(<span class="js-string">"Tony Stark"</span>); <span class="js-comment">// Output: Hello, Tony Stark!</span>
+</div>
+
+        <h3>You Can Even Loop with Functions... But Be Very Careful</h3>
+        <p>
+          Yes, Functions can be called from inside loops. This allows you repeat
+          block of code efficiently. Here's a simple example:
+        </p>
+        <!-- Area that simulates the code, do not touch the formatting otherwise it will break. -->
+
+<div class="code-container"><span class="js-comment">// Calling a function inside a loop is done like so:</span>
+<span class="js-keyword">function</span> <span class="js-function">explosion</span>() {
+    <span class="js-reserved">console</span>.<span class="js-function">log</span>(<span class="js-string">"💥 Boom!"</span>);
+}
+
+<span class="js-comment">// This loop loops 3 times.</span>
+<span class="js-keyword">for</span> (<span class="js-keyword">let</span> <span class="js-variable">i</span> = <span class="js-number">0</span>; <span class="js-variable">i</span> < <span class="js-number">3</span>; <span class="js-variable">i</span>++) {
+    <span class="js-function">sayBoom</span>();
+}<br>
+<span class="js-comment">// Output:</span>
+<span class="js-comment">// 💥 Boom!</span>
+<span class="js-comment">// 💥 Boom!</span>
+<span class="js-comment">// 💥 Boom!</span>
+</div>
+
+        <h3>
+          But Be Warned! Not all functions should be allowed t o touch the grace
+          of a loop.
+        </h3>
+        <p>
+          While it might be tempting to put any of your hand crafted perfection
+          of a function inside a loop, be careful. Some functions take a ton of
+          performance(Like database calls, animations, or sound effects
+          surprisingly). Placing them in a loop without being cautious will
+          haunt you and your computer:
+        </p>
+        <ul>
+          <li>Performance slowdowns are highly likely</li>
+          <li>Infinite noise or error spam sounds will drive you crazy</li>
+          <li>
+            Browser crashes or CPU overheat (yes, even in 2025 that is still a
+            thing)
+          </li>
+        </ul>
+        <!-- Area that simulates the code, do not touch the formatting otherwise it will break. -->
+
+        <div class="code-container"><span class="js-comment">// The loop of DOOM: do NOT actually run this please, spare the lives of countless hours.</span>
+<span class="js-keyword">function</span> <span class="js-function-name">selfDestruct</span>() {
+    <span class="js-reserved">alert</span>(<span class="js-string">"☢️ Self-destruct initiated!"</span>);
+}<br>
+<span class="js-keyword">while</span> (<span class="js-keyword">true</span>) {
+    <span class="js-function-name">selfDestruct</span>();
+}
+</div>
+
+        <p>
+          <strong>Result:</strong> An endless stream of alerts more then happy
+          to haunt you. Possibly the end of your browser tab. And the en of your
+          sanity is all but confirmed.
+        </p>
+
+        <h3>Why Use User-Defined Functions?</h3>
+        <ul>
+          <li>
+            They allow you to <strong>reuse code</strong> allowing for less
+            redundancy and less bugs.
+          </li>
+          <li>
+            They help <strong>organize logic</strong> into bite sized chunks.
+          </li>
+          <li>
+            They make your code look cleaner and more professional.(unless you
+            haphazardly chuck them in loops)
+          </li>
+        </ul>
+
+        <!-- Navigates to the next page when clicked. -->
+        <button onclick="window.location.href='/Back to JS/html/events-dom.html';">
+          Go To The Next Page ==>
+        </button>
+      </section>
+    </main>
+  </body>
+  <script src="/Back to JS/js/script.js"></script>
+</html>

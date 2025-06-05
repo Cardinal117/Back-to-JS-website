@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Back to JavaScript</title>
+    <link rel="stylesheet" href="/Back to JS/css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style></style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <section class="left-top-align-table">
+                <ul id="nav">
+                    <li class="drop-down">
+                        <a class="drop-down">
+                            <div class="menu-toggle">
+                                <div class="hamburger-menu">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <span class="menu-label">Menu</span>
+                            </div>
+                        </a>
+                        <div class="drop">
+                            <a href="/Back to JS/index.html">Home</a>
+                            <a href="/Back to JS/html/variable.html">Variables</a>
+                            <a href="/Back to JS/html/conditional-statements.html">Conditional Statements</a>
+                            <a href="/Back to JS/html/arrays-and-loops.html">Arrays and Loops</a>
+                            <a href="/Back to JS/html/maps.html">Maps</a>
+                            <a href="/Back to JS/html/built-in-functions.html">Built-in Functions</a>
+                            <a href="/Back to JS/html/user-defined-functions.html">User-Defined Functions</a>
+                            <a href="/Back to JS/html/events-dom.html">Events (DOM)</a>
+                            <a href="/Back to JS/html/jquery.html">jQuery</a>
+                        </div>
+                    </li>
+                </ul>
+                <span class="right-align-text"><a href="/Back to JS/html/contactUs.html">Contact Us</a></span>
+            </section>
+        </nav>
+    </header>
+    <video autoplay muted loop playsinline id="background-video">
+        <source src="/Back to JS/media/tech.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+    <main>
+        <section class="container">
+            <h1>
+                Back To <span class="js-span">JavaScript:</span> jQuery
+            </h1>
+            <hr />
+            <h3>jQuery</h3>
+            <p>jQuery simplifies DOM manipulation using shorter syntax and built-in utilities(yes, making it way easier
+                to do tedious tasks). Here is something interesting, see that menu top left? Well I made that menu using jQuery and
+                I think that is pretty cool. Here’s a quick jQuery cheat sheet/reminder list:</p>
+                <!-- Area that simulates the code, do not touch the formatting otherwise it will break. -->
+
+            <h4>Basic Structure:</h4>
+<div class="code-container"><span class="js-function">$(<span class="js-keyword">function</span>() {</span>
+    <span class="js-comment">// jQuery code goes here</span>
+<span class="js-function">});</span>
+</div>
+
+            <h4>Common Selectors:</h4>
+            <ul>
+                <li><code>$(&quot;h1&quot;)</code> – Selects all &lt;h1&gt; elements.</li>
+                <li><code>$("#mainHeading")</code> – Selects element with ID <code>mainHeading</code>.</li>
+                <li><code>$(".yellow-font")</code> – Selects all elements with class <code>yellow</code>.</li>
+                <li><code>$("*")</code> – Selects all HTML elements.</li>
+                <li><code>$(this)</code> – Refers to the current selected element.</li>
+                <li><code>$("button")</code> – Selects all &lt;button&gt; elements.</li>
+                <li><code>$("[href]")</code> – Selects elements with an <code>href</code> attribute.</li>
+            </ul>
+            <!-- Area that simulates the code, do not touch the formatting otherwise it will break. -->
+
+            <h4>Creating & Appending Elements:</h4>
+<div class="code-container"><span class="js-comment">// This adds the text below in between the the &lt;p&gt;&lt;/p&gt; elements.</span>
+<span class="js-keyword">let</span> <span class="js-variable">newParagraph</span> = <span class="js-function">$(</span><span class="js-string">"&lt;p&gt;&lt;/p&gt;"</span><span class="js-function">)</span>.<span class="js-function">text</span>(<span class="js-string">"Salutations fellow programmer!"</span>);<br>
+<span class="js-function">$(</span><span class="js-string">"body"</span><span class="js-function">)</span>.<span class="js-function">append</span>(<span class="js-variable">newParagraph</span>);<span class="js-comment">// This simply appends the &lt;p&gt;&lt;/p&gt; element above to the body of the page.</span>
+</div>
+
+            <h4>Common jQuery Functions:</h4>
+            <ul>
+                <li><code>after()</code> – Adds content after the selected element.</li>
+                <li><code>append()</code> – Inserts content at the end of the selected element.</li>
+                <li><code>before()</code> – Adds content before the selected element.</li>
+                <li><code>empty()</code> – Clears the content but keeps the element.</li>
+                <li><code>prepend()</code> – Inserts content at the start of the selected element.</li>
+                <li><code>text()</code> – Gets or sets text of the selected element.</li>
+                <li><code>val()</code> – Gets or sets form field value.</li>
+                <li><code>remove()</code> – Removes the element entirely.</li>
+            </ul>
+
+            <h4>Linking External jQuery Scripts:</h4>
+<!-- Codes for html elements <head>, <script> ect -->
+<div class="code-container"><span class="js-keyword">&lt;head&gt;</span>
+  <span class="js-keyword">&nbsp;&nbsp;&lt;script</span> <span class="js-function">src</span>= <span class="js-string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span><span class="js-keyword">&gt;&lt;/script&gt;</span>
+  <span class="js-keyword">&nbsp;&nbsp;&lt;script</span> <span class="js-function">src</span>= <span class="js-string">"script.js"</span><span class="js-keyword">&gt;&lt;/script&gt;</span>
+<span class="js-keyword">&lt;/head&gt;</span>
+</div>
+
+            <h4>Events & Effects:</h4>
+<div class="code-container"><span class="js-comment">// Select all paragraph elements</span>
+<span class="js-function">$(</span><span class="js-string">"p"</span><span class="js-function">)</span>.<span class="js-function">click</span>(<span class="js-keyword">function</span>() {<span class="js-comment"> // Add a click event handler</span>
+&nbsp;&nbsp;<span class="js-comment">// Hide the clicked paragraph slowly</span>
+&nbsp;&nbsp;<span class="js-function">$(</span><span class="js-keyword">this</span><span class="js-function">)</span>.<span class="js-function">hide</span>(<span class="js-string">'slow'</span>);
+});
+</div>
+
+
+            <h4>Common jQuery Events:</h4>
+            <ul>
+                <li><strong>Mouse Events:</strong> click, dblclick, mouseenter</li>
+                <li><strong>Keyboard Events:</strong> keypress, keydown, keyup</li>
+                <li><strong>Form Events:</strong> submit, change, blur</li>
+            </ul>
+            <!-- Area that simulates the code, do not touch the formatting otherwise it will break. -->
+
+            <h4>Chaining Effects:</h4>
+<div class="code-container"><span class="js-comment">// Select all button elements</span>
+<span class="js-function">$(</span><span class="js-string">"button"</span><span class="js-function">)</span>
+<span class="js-comment">// Change text color to blue</span>
+.<span class="js-function">css</span>(<span class="js-string">"color"</span>, <span class="js-string">"blue"</span>)
+<span class="js-comment">// Slide the button down over 500ms</span>
+.<span class="js-function">slideDown</span>(<span class="js-number">500</span>)
+<span class="js-comment">// Then slide it back up over 500ms</span>
+.<span class="js-function">slideUp</span>(<span class="js-number">500</span>);
+</div>
+
+            <h4>Common jQuery Effects:</h4>
+            <ul>
+                <li><code>hide()</code> – Hides elements</li>
+                <li><code>show()</code> – Displays elements</li>
+                <li><code>fadeIn()</code>, <code>fadeOut()</code> – Fades elements in or out</li>
+                <li><code>slideUp()</code>, <code>slideDown()</code> – Slides content</li>
+                <li><code>animate()</code> – Animates properties</li>
+                <li><code>stop()</code> – Stops ongoing effects</li>
+            </ul>
+
+            <h2>There is no practice this time but an inspiration rather:</h2>
+            <p>Click the button below to be amazed. Take note that this was made using only Javascript paired with JQuery.</p>
+            
+            <button class="button-styling" onclick="buttonPress()" style="margin-top: 0px;">Toggle Animation</button></div>
+            <div class="container">
+                <div class="cube chainLeft">
+                    <div class="cube2"></div>
+                </div>
+                <div class="chain"></div>
+                <div class="cube chainRight">
+                    <div class="cube2"></div>
+                </div>
+                <div class="chain"></div>
+                <div class="cube chainLeft">
+                    <div class="cube2"></div>
+                </div>
+                <div class="chain"></div>
+                <div class="cube chainRight">
+                    <div class="cube2"></div>
+                </div>
+            </div>
+
+            <!-- Navigates to the home page when clicked. -->
+            <button onclick="window.location.href='/Back to JS/index.html';">
+                <== Return To The Home Page </button>
+        </section>
+    </main>
+</body>
+<script src="/Back to JS/js/script.js"></script>
+
+</html>
